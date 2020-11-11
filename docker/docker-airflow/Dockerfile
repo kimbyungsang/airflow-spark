@@ -109,6 +109,7 @@ COPY config/airflow.cfg ${AIRFLOW_HOME}/airflow/airflow.cfg
 ###############################
 # Spark submit binaries and jars (Spark binaries must be the same version of spark cluster)
 COPY spark_files/spark-2.4.5-bin-hadoop2.6/bin /usr/local/spark/bin 
+COPY spark_files/spark-2.4.5-bin-hadoop2.6/python /usr/local/spark/python
 COPY spark_files/spark-2.4.5-bin-hadoop2.6/jars /usr/local/spark/assembly/target/scala-2.12/jars
 # Create SPARK_HOME env var
 ENV SPARK_HOME /usr/local/spark
